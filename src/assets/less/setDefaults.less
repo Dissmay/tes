@@ -1,0 +1,89 @@
+/* Set defaults */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url('../fonts/Gilroy-Black.ttf');
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url('../fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url('../fonts/Gilroy-Medium.ttf');
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url('../fonts/Gilroy-Regular.ttf');
+}
+
+html,
+body{
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+
+body{
+  font-family: 'Gilroy-Medium', 'Open Sans', 'Arial', sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.btn-reset{
+  appearance: none;
+  border-radius: 0;
+  opacity: 1;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 5px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 2px;
+  background-color: black;
+}
+
+.ul-reset{
+  list-style: none;
+}
+
+.input{
+  font: inherit;
+  appearance: none;
+  opacity: 1;
+  transition: black;
+  &:focus{
+    outline: none;
+    box-shadow: 1px 1px 30px 1px rgba(60,86,166, 0.3);
+  }
+}
+
+img,
+video{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+}
