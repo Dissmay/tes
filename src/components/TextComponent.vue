@@ -30,18 +30,41 @@ export default {
         justify-content: center;
         z-index: 10;
         word-wrap: break-word;
+        .media(1250px,{
+            width: 100% !important;
+            z-index:2;
+        });
+        .media(450px,{
+            max-width: 90%;
+            padding-right: 30px;
+        });
         h2{
             font-size: 48px;
             margin-bottom: 95px;
             font-family: 'Gilroy-Bold';
             line-height: 50px;
+            .media(1250px,{
+                margin-bottom: 20px;
+                font-size: 40px;
+                z-index:2;
+            });
         }
         p{
             margin-bottom: 62px;
+            font-size: 18px;
+            font-family: 'Girloy';
+            .media(1250px,{
+                margin-bottom: 20px;
+                z-index:2;
+            });
         }
         a{
             color: #ffffff;
             position: relative;
+            font-family: 'Girloy-Bold';
+            .media(1250px,{
+                z-index:2;
+            });
             .fa{
                position: absolute;
                top: 5px;
@@ -50,9 +73,15 @@ export default {
         }
         &.right{
             .shift-left(4.5);
+            .media(1250px,{
+                .shift-left(0);
+            });
         }
         &.left{
             .shift-left(2);
+            .media(1250px,{
+                .shift-left(0);
+            });
         }
     }
 </style>

@@ -71,11 +71,25 @@ export default {
             padding-bottom: 50px;
             border-bottom: 1px solid #D08C00;
             justify-content: space-between;
+            div{
+                .media(900px,{
+                    .size(6);
+                    margin-bottom: 30px;
+                });
+                 .media(600px,{
+                    .size(12);
+                    margin-bottom: 10px;
+                });
+            }
         }
         &__itemSizeLogo{
             .col();
             .size(3);
             margin-left: 0;
+            p{
+                font-size: 16px;
+                font-family: 'Arial';
+            }
         }
         &__itemSizeSections{
             .col();
@@ -96,6 +110,7 @@ export default {
             .col();
             .size(6);
             font-size: 18px;
+            font-family: 'Arial';
             line-height: 39px;
             color: #FFFFFF;
         }
@@ -109,8 +124,13 @@ export default {
         }
         &__bot{
             justify-content: space-between;
+            .media(700px,{
+                margin-left: 30px !important;
+                margin-right: 30px !important;
+            });
             li{
                 font-size: 14px;
+            
             }
             &__ulSocial{
                
@@ -131,7 +151,6 @@ export default {
             line-height: 18px;
         }
         img{
-            margin-right: -9px;
         }
     }
 

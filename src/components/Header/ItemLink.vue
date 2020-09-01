@@ -10,9 +10,11 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
     .link{
         text-decoration: none;
-        color: black;
+         color: #421100;
+        font-family: 'Gilroy-Medium';
+        
     }
 </style>

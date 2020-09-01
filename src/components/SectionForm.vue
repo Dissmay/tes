@@ -47,20 +47,27 @@ export default {
         &__div{
             color:#421100;
             justify-content: space-between;
+            .media(900px,{
+                display: block !important; 
+            });
         }
 
         h2{
             font-size: 50px;
-            font-weight: bold;
+            font-family: 'Girloy-Bold';
             line-height: 45px;
             margin-bottom: 30px;
         }
         p{
             font-size: 18px;
+            font-family: 'Girloy-Medium';
             line-height: 25px;
         }
         &__wrapperText{
-            .shift-left(-0.7)
+            .shift-left(-0.7);
+            .media(1250px,{
+                .shift-left(0);
+            })
         }
     }
     
@@ -74,6 +81,11 @@ export default {
             line-height: 45px;
             margin-bottom: 45px;
             background-color: #F2F2F2;
+            .media(450px,{
+                width:100px;
+                justify-items: start;
+                .shift-right(0);
+            });
         }
         button{
             height: 70px;
@@ -90,6 +102,13 @@ export default {
         grid-template-columns: 183px 183px;
         gap: 10px 56px;
         grid-template-areas: "input1 input2" "input3 button";
+         .media(450px,{
+                width:100px;
+                justify-items: start;
+                grid-template-columns: 100px 100px;
+                .shift-right(0);
+                gap:10px 10px;
+            });
         &__input1{
             grid-area: input1;
         }

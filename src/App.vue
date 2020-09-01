@@ -2,7 +2,7 @@
   <div id="app">
     <Header class="wrapper"/>
     <main>
-      <section class="d-f">
+      <section class="d-f sectionPresentation">
         <Presentation :dataPresent="presentOne"/>
         <Presentation :dataPresent="presentTwo"/>
       </section>
@@ -228,12 +228,14 @@ export default {
         entries.forEach(entry => {
           if(entry.isIntersecting){
             let img =  entry.target;
-            if(entry.target.nodeName == 'IMG'){
+            console.log(entry);
+            if(entry.target.nodeName == 'IMG' || entry.target.nodeName == 'IFRAME' ){
               img.src = img.getAttribute('data-src');
             }
             if(entry.target.nodeName == 'DIV'){
               img.style.backgroundImage = `url(${img.getAttribute('data-src')})`
             }
+
             observer.unobserve(img)
           }
         });
@@ -246,7 +248,10 @@ export default {
     const sectionItem = document.querySelectorAll('.imageSection__item');
     const sectionVideo = document.querySelector('.sectionVideo__bgc');
     const sectionForm = document.querySelectorAll('.sectionForm__backGroundImage');
+    // const videoPresent = document.querySelectorAll('.videoPresent');
+    
     targets.forEach(this.lazyLoad)
+    // videoPresent.forEach(this.lazyLoad)
     sectionItem.forEach(this.lazyLoad)
     sectionForm.forEach(this.lazyLoad)
     this.lazyLoad(sectionVideo)
@@ -264,8 +269,6 @@ export default {
   /* General */
   #app{
     background-color: #FFFFFF;
-    font-family: 'Gilroy';
-    font-style: normal;
   }
 .mapBackground{
   overflow: hidden;
@@ -283,6 +286,11 @@ export default {
   width: 926px;
   height: 814px;
   }
+}
+.sectionPresentation{
+    .media(1250px,{
+        display: block;
+    })
 }
 .descriptionWrapper{
   .size(3);

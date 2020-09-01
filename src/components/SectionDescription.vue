@@ -2,7 +2,7 @@
 <!-- компонент (секция) принимает обьект -->
   <section :class="obj.backgroundSection ? 'pb-70 backgroundHourse' : 'pb-70'">
         <div>
-            <div class="wrapper  pt-130 pb-30 d-f jc-between ai-center">
+            <div class="wrapper sectionDescription__wrapper  pt-130 pb-30 d-f jc-between ai-center">
 
                 <TextComponent :text="obj.present"/>
 
@@ -42,9 +42,16 @@ export default {
 <style lang="less" scoped>
  @import './src/assets/less/smart-grid.less';
   @import './src/assets/less/mixins.less';
+  .sectionDescription__wrapper{
+      .media(900px,{
+          display:block;
+      });
+  }
     .desctiprionText{
         font-size: 18px;
         color:#421100;
+        font-family: 'Girloy-Medium';
+
         line-height: 25px;
         &__top{
            
@@ -56,6 +63,10 @@ export default {
     }
     .descriptionWrapper{
         .shift-right(0.8);
+        .media(900px,{
+            padding-top: 40px;
+            width: 100%;
+        });
     }
      .backgroundHourse{
         position: relative;

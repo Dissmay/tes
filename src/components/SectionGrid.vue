@@ -13,6 +13,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import './src/assets/less/smart-grid.less';
+@import './src/assets/less/mixins.less';
 .imageSection{
     &__item{
         background-repeat: no-repeat;
@@ -27,6 +29,22 @@ export default {
   gap: 18px 15px;
   grid-template-areas: "item1 item3 item4 item6" "item2 item3 item5 item6";
   padding-bottom: 20px;
+  .media(1000px,{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
+    gap: 18px 15px;
+    grid-template-areas:
+    "item1 item3"
+    "item4 item3"
+    "item2 item6"
+    "item5 item6"
+    "item5 item6";
+  });
+  .media(500px,{
+    display: grid;
+    grid-template-rows: 0.3fr 0.6fr 0.3fr 0.3fr;
+  });
 }
 .item1{
   height: 285px;

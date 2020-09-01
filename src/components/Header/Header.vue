@@ -12,8 +12,8 @@
         </ul>
       </nav>
       <!-- кнопка "связаться" и кнопка валюты -->
-      <nav>
-        <ul class="d-f ul-reset">
+      <nav class="ulVal">
+        <ul class="d-f ul-reset  ulValUl">
           <li class="header__navigationRightBlock fw-bold c-pointer">Зв'язатися</li>
           <li class="header__navigationRightBlock header__lastChild"><span class="fw-bold c-pointer">UA</span>  <span class="c-pointer">EN</span></li>
         </ul>
@@ -45,21 +45,48 @@ export default {
 </script>
 
 <style lang="less">
+@import './src/assets/less/smart-grid.less';
+@import './src/assets/less/mixins.less';
+    .ulVal{
+        .media(900px,{
+            width: 100% !important;
+        });
+    }
+    .ulValUl{
+        .media(900px,{
+            display: flex;
+        justify-content: space-between;
+        });
+    }
   .header{
     /* margin-top: 30px; */
+   
     &__logotype{
       position: relative;
       left: -20px;
+      .media(700px,{
+        left: 0;
+       });
     }
     &__ul{
       padding-left: 0px;
       padding-right: 0px;
+       .media(700px,{
+        flex-wrap: wrap;
+        .size(12);
+        });
     }
     &__navigationItem{
+
       margin-left: 12px;
       margin-right: 12px;
       line-height: 120px;
       position: relative;
+      .media(700px,{
+        .size(5);
+        line-height: 30px;
+        text-align: center;
+       });
       &:after{
         content:'';
         position: absolute;
@@ -81,7 +108,6 @@ export default {
       padding-right: 24px;
       border-left: 1px solid 	rgba(112,112,105,0.3);
       border-right: 1px solid rgba(112,112,105,0.3);;
-      
       line-height: 120px;
     }
     &__lastChild{
